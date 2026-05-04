@@ -41,37 +41,43 @@ main {
   max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;
 }
 
-.hero { padding: 8rem 0 4rem; }
-.hero h1 { font-size: clamp(2rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1rem; }
-.hero p { font-size: clamp(1rem, 2vw, 1.2rem); max-width: 600px; }
+/* === HERO (editorial typography style) === */
 
-.projects, .studio, .contact { padding: 5rem 0; }
-
-h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2rem; }
-
-.grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;
+.hero {
+  padding: 14rem 2rem 8rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.project img {
-  width: 100%; filter: grayscale(100%);
-  transition: filter 0.3s ease;
+.hero h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
-.project:hover img { filter: none; }
-.project span { display: block; margin-top: 0.5rem; font-size: 0.85rem; text-transform: uppercase; }
 
-.socials a { margin-right: 1.5rem; color: var(--black); text-decoration: none; }
+.hero p {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #111;
+}
 
-footer { border-top: 1px solid var(--black); text-align: center; padding: 2rem; font-size: 0.8rem; text-transform: uppercase; }
-
-/* Language visibility */
-[data-lang] { transition: opacity 0.25s ease; }
-.hidden { opacity: 0; pointer-events: none; position: absolute; }
-
-/* Responsive */
+/* Responsive: tighter composition on small screens */
 @media (max-width: 700px) {
-  header { flex-direction: column; align-items: flex-start; }
-  nav { margin-top: 1rem; margin-bottom: 1rem; }
-  .hero { padding: 5rem 0 3rem; }
-  .projects, .studio, .contact { padding: 3rem 0; }
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
 }
