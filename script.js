@@ -1,8 +1,8 @@
 const langButtons = document.querySelectorAll('.lang-switcher button');
 const langElements = document.querySelectorAll('[data-lang]');
 
-let currentLang = localStorage.getItem('lang') || 'en';
-setLanguage(currentLang);
+// ALWAYS DEFAULT TO ENGLISH
+setLanguage('en');
 
 // Sprache wechseln
 langButtons.forEach(button => {
