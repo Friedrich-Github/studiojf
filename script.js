@@ -1,31 +1,28 @@
 const langButtons = document.querySelectorAll('.lang-switcher button');
 const langElements = document.querySelectorAll('[data-lang]');
 
-// Standard: Englisch
 let currentLang = localStorage.getItem('lang') || 'en';
 setLanguage(currentLang);
 
-// Beim Klick Sprache wechseln
+// Sprache wechseln
 langButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const lang = button.dataset.lang;
-    setLanguage(lang);
+    setLanguage(button.dataset.setlang);
   });
 });
 
 function setLanguage(lang) {
-  currentLang = lang;
 
   // Buttons markieren
   langButtons.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.classList.toggle('active', btn.dataset.setlang === lang);
   });
 
-  // Alle Texte ein-/ausblenden
+  // Texte ein-/ausblenden
   langElements.forEach(el => {
     el.classList.toggle('hidden', el.dataset.lang !== lang);
   });
 
-  // Lokal speichern
+  // Sprache merken
   localStorage.setItem('lang', lang);
 }
