@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio J&F — Architecture & Design</title>
+
   <link rel="icon" type="image/png" href="favicon.png"> 
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
@@ -13,39 +14,63 @@
 
 <header>
   <div class="logo">Studio J&F</div>
+
+  <!-- NAVIGATION: now with 3 language versions -->
   <nav>
+
+    <!-- EN -->
     <a href="#home" data-lang="en">Home</a>
     <a href="#projects" data-lang="en">Projects</a>
     <a href="#studio" data-lang="en">Studio</a>
     <a href="#contact" data-lang="en">Contact</a>
     <a href="#imprint" data-lang="en">Imprint</a>
-  </nav>
-  <div class="lang-switcher">
-<button data-setlang="en" class="active">EN</button>
-<button data-setlang="fr">FR</button>
-<button data-setlang="it">IT</button>
 
+    <!-- FR -->
+    <a href="#home" data-lang="fr" class="hidden">Accueil</a>
+    <a href="#projects" data-lang="fr" class="hidden">Projets</a>
+    <a href="#studio" data-lang="fr" class="hidden">Studio</a>
+    <a href="#contact" data-lang="fr" class="hidden">Contact</a>
+    <a href="#imprint" data-lang="fr" class="hidden">Mentions légales</a>
+
+    <!-- IT -->
+    <a href="#home" data-lang="it" class="hidden">Home</a>
+    <a href="#projects" data-lang="it" class="hidden">Progetti</a>
+    <a href="#studio" data-lang="it" class="hidden">Studio</a>
+    <a href="#contact" data-lang="it" class="hidden">Contatti</a>
+    <a href="#imprint" data-lang="it" class="hidden">Note legali</a>
+
+  </nav>
+
+  <!-- LANGUAGE SWITCHER – always visible -->
+  <div class="lang-switcher">
+    <button data-setlang="en" class="active">EN</button>
+    <button data-setlang="fr">FR</button>
+    <button data-setlang="it">IT</button>
   </div>
 </header>
 
+
 <main>
-  
-<section id="home" class="hero">
-  <h1 data-lang="en">Space as collective practice.</h1>
-  <h1 data-lang="fr" class="hidden">L’espace comme pratique collective.</h1>
-  <h1 data-lang="it" class="hidden">Lo spazio come pratica collettiva.</h1>
 
-  <p data-lang="en">
-    Studio J&F is a non‑profit association exploring the social dimensions of space through installation, design, and collaborative research.
-  </p>
-  <p data-lang="fr" class="hidden">
-    Studio J&F est une association à but non lucratif qui explore les dimensions sociales de l’espace à travers l’installation, le design et la recherche collective.
-  </p>
-  <p data-lang="it" class="hidden">
-    Studio J&F è un’associazione senza scopo di lucro che esplora le dimensioni sociali dello spazio attraverso installazioni, design e ricerca collettiva.
-  </p>
-</section>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h1 data-lang="en">Space as collective practice.</h1>
+    <h1 data-lang="fr" class="hidden">L’espace comme pratique collective.</h1>
+    <h1 data-lang="it" class="hidden">Lo spazio come pratica collettiva.</h1>
 
+    <p data-lang="en">
+      Studio J&F is a non‑profit association exploring the social dimensions of space through installation, design, and collaborative research.
+    </p>
+    <p data-lang="fr" class="hidden">
+      Studio J&F est une association à but non lucratif qui explore les dimensions sociales de l’espace à travers l’installation, le design et la recherche collective.
+    </p>
+    <p data-lang="it" class="hidden">
+      Studio J&F è un’associazione senza scopo di lucro che esplora le dimensioni sociali dello spazio attraverso installazioni, design e ricerca collettiva.
+    </p>
+  </section>
+
+
+  <!-- PROJECTS -->
   <section id="projects" class="projects">
     <h2 data-lang="en">Projects</h2>
     <h2 data-lang="fr" class="hidden">Projets</h2>
@@ -59,22 +84,26 @@
     </div>
   </section>
 
+
+  <!-- STUDIO -->
   <section id="studio" class="studio">
     <h2 data-lang="en">Studio</h2>
     <h2 data-lang="fr" class="hidden">Studio</h2>
     <h2 data-lang="it" class="hidden">Studio</h2>
 
     <p data-lang="en">
-      Founded by Joséphine Bourdariat and Friedrich Mönninger, Studio J&F (Association "Studio J&F", registered in France) works across disciplines at the intersection of architecture, design, and research. Each project emerges through experimentation, material study, and precise reduction.
+      Founded by Joséphine Bourdariat and Friedrich Mönninger, Studio J&F works across disciplines at the intersection of architecture, design, and research. Each project emerges through experimentation, material study, and precise reduction.
     </p>
     <p data-lang="fr" class="hidden">
-      Fondé par Joséphine Bourdariat et Friedrich Mönninger, Studio J&F (Association "Studio J&F", enregistrée en France) travaille à l’intersection de l’architecture, du design et de la recherche. Chaque projet résulte d’une expérimentation matérielle et d’une réduction précise.
+      Fondé par Joséphine Bourdariat et Friedrich Mönninger, Studio J&F travaille à l’intersection de l’architecture, du design et de la recherche. Chaque projet résulte d’une expérimentation matérielle et d’une réduction précise.
     </p>
     <p data-lang="it" class="hidden">
-      Fondato da Joséphine Bourdariat e Friedrich Mönninger, Studio J&F (Associazione "Studio J&F", registrata in Francia) lavora all'incrocio tra architettura, design e ricerca. Ogni progetto nasce da sperimentazione, studio dei materiali e riduzione precisa.
+      Fondato da Joséphine Bourdariat e Friedrich Mönninger, Studio J&F lavora all'incrocio tra architettura, design e ricerca. Ogni progetto nasce da sperimentazione, studio dei materiali e riduzione precisa.
     </p>
   </section>
 
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2 data-lang="en">Contact</h2>
     <h2 data-lang="fr" class="hidden">Contact</h2>
@@ -88,6 +117,8 @@
     </div>
   </section>
 
+
+  <!-- IMPRINT -->
   <section id="imprint" class="imprint">
     <h2 data-lang="en">Imprint</h2>
     <h2 data-lang="fr" class="hidden">Mentions légales</h2>
