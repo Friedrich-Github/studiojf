@@ -247,3 +247,10 @@ section + section {
 .hidden {
   display: none !important;
 }
+
+.full-screen {
+  width: 100vw;
+  height: auto;
+  margin-left: calc(50% - 50vw);
+}
+
