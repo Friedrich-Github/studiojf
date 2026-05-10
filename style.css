@@ -21,6 +21,15 @@
   font-style: normal;
 }
 
+/* === LANGUAGE VISIBILITY FIX === */
+[data-lang] {
+  transition: opacity 0.25s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
 /* === Typography Defaults with TWK Lausanne === */
 
 body, p, li {
