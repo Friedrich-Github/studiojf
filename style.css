@@ -1,9 +1,9 @@
 [data-lang] {
-  transition: opacity 0.25s ease;
+  display: none;
 }
 
-.hidden {
-  display: none !important;
+[data-lang].active-lang {
+  display: block !important;
 }
 
 
