@@ -315,13 +315,8 @@ section + section {
 }
 
 .full-screen {
-  width: 100%;
+  width: 100vw;
   height: auto;
-  display: block;
-  margin: 4rem 0;
-  object-fit: cover;
-}
-
 }
 
 }
