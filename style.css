@@ -1,3 +1,4 @@
+/* === LANGUAGE VISIBILITY FIX === */
 [data-lang] {
   display: none;
 }
@@ -5,7 +6,6 @@
 [data-lang].active-lang {
   display: block !important;
 }
-
 
 /* === TWK Lausanne Font Loading === */
 
