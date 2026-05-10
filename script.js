@@ -1,3 +1,12 @@
+/* === LANGUAGE VISIBILITY FIX === */
+[data-lang] {
+  transition: opacity 0.25s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
 const langButtons = document.querySelectorAll('.lang-switcher button');
 const langElements = document.querySelectorAll('[data-lang]');
 
