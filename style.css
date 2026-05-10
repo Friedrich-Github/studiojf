@@ -271,7 +271,7 @@ section + section {
     flex-direction: row;
     gap: 1rem;
   }
-  
+
   .projects,
   .studio,
   .contact,
