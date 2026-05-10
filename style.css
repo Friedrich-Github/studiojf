@@ -30,8 +30,7 @@
   display: none !important;
 }
 
-/* === Typography Defaults with TWK Lausanne === */
-
+/* === TYPOGRAPHY === */
 body, p, li {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 250;
@@ -45,6 +44,18 @@ h1 {
 h2 {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 750;
+}
+
+/* === NAV DEFAULT === */
+nav a {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 750;
+  transition: font-weight 0.2s ease;
+}
+
+/* === NAV ACTIVE ON SCROLL === */
+nav a.active-section {
+  font-weight: 950;
 }
 
 
