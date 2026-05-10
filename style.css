@@ -36,8 +36,6 @@
   font-style: normal;
 }
 
-}
-
 
 /* =========================================================
    3) TYPOGRAPHY
@@ -47,17 +45,15 @@ body, p, li {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 250;
 }
-}
+
 h1 {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 950;
-
 }
 
 h2 {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 750;
-
 }
 
 
