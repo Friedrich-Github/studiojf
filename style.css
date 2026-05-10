@@ -92,6 +92,12 @@ header {
   border-bottom: 1px solid #000;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .logo {
   font-family: "Inter", sans-serif;
   font-weight: 700;
