@@ -1,6 +1,18 @@
 const langButtons = document.querySelectorAll('.lang-switcher button');
 const langElements = document.querySelectorAll('[data-lang]');
 
+function setLanguage(lang) {
+  langButtons.forEach(btn =>
+    btn.classList.toggle("active", btn.dataset.setlang === lang)
+  );
+
+  langElements.forEach(el =>
+    el.classList.toggle("hidden", el.dataset.lang !== lang)
+  );
+
+  localStorage.setItem("lang", lang);
+}
+
 // ALWAYS DEFAULT TO ENGLISH
 setLanguage('en');
 
