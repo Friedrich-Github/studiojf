@@ -344,3 +344,14 @@ section + section {
   display: inline-block;
   text-decoration: none;
 }
+
+
+.socials a::after {
+  content: "↗";
+  font-size: 0.85em;
+  line-height: 1;
+  color: inherit;
+
+  display: inline-block;
+  text-decoration: none;
+}
