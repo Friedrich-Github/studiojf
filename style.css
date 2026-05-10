@@ -326,3 +326,21 @@ section + section {
   display: none !important;
 }
 
+
+/* base link style */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* navigation */
+nav a {
+  color: #000;
+}
+
+/* content links */
+p a,
+.socials a {
+  color: #000;
+  font-weight: 400;
+}
