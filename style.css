@@ -100,7 +100,10 @@ nav a.active-section {
 .lang-switcher button.active { text-decoration: underline; }
 
 main {
-  max-width: var(--max-width); margin: 0 auto; padding: 0 2rem;
+  main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* === HERO (editorial typography style) === */
