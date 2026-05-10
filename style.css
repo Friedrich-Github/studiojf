@@ -30,6 +30,7 @@
 }
 
 
+/* === TYPOGRAPHY === */
 body, p, li {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 250;
@@ -45,6 +46,18 @@ h2 {
   font-weight: 750;
 }
 
+/* === NAV DEFAULT === */
+nav a {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 750;
+  transition: font-weight 0.2s ease;
+}
+
+/* === NAV ACTIVE ON SCROLL === */
+nav a.active-section {
+  font-weight: 950;
+}
+
 
 
 :root {
@@ -55,7 +68,8 @@ h2 {
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
+
+ {
  body, p, li {
   font-family: "TWKLausanne", sans-serif;
   font-weight: 250;
