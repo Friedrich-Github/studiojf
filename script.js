@@ -27,6 +27,11 @@ langButtons.forEach(button => {
 
 
 
+/* =========================================================
+   SECTION HIGHLIGHT ON SCROLL
+   (Navigation gets font-weight 950 on active section)
+   ========================================================= */
+
 const sections = document.querySelectorAll("main section");
 const navLinks = document.querySelectorAll("nav a");
 
@@ -34,21 +39,15 @@ function activateSectionOnScroll() {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 200;
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
+    const offset = section.offsetTop - 150; // activate earlier while scrolling
+    if (window.scrollY >= offset) {
       current = section.getAttribute("id");
     }
   });
 
   navLinks.forEach(link => {
     link.classList.remove("active-section");
-
-    if (link.getAttribute("href") === "#" + current) {
+    if (link.getAttribute("href").includes(current)) {
       link.classList.add("active-section");
     }
   });
@@ -56,13 +55,15 @@ function activateSectionOnScroll() {
 
 window.addEventListener("scroll", activateSectionOnScroll);
 
-/* Smooth Scroll */
+
+/* =========================================================
+   SMOOTH SCROLLING FOR NAVIGATION (optional but elegant)
+   ========================================================= */
+
 navLinks.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-
     const target = document.querySelector(link.getAttribute("href"));
-
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
