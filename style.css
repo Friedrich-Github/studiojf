@@ -310,7 +310,7 @@ section + section {
   }
 }
 
-  img {
+img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -318,9 +318,7 @@ section + section {
 
 .full-screen {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+  max-width: 900px; /* oder var(--max-width), wenn du willst */
   margin: 2rem auto;
 }
   
