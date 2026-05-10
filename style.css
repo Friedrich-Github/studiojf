@@ -1,4 +1,44 @@
-@import url('[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap)');
+/* === TWK Lausanne Font Loading === */
+
+@font-face {
+  font-family: "TWKLausanne";
+  src: url("fonts/TWKLausanne-250.otf") format("opentype");
+  font-weight: 250;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TWKLausanne";
+  src: url("fonts/TWKLausanne-750.otf") format("opentype");
+  font-weight: 750;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TWKLausanne";
+  src: url("fonts/TWKLausanne-950.otf") format("opentype");
+  font-weight: 950;
+  font-style: normal;
+}
+
+/* === Typography Defaults with TWK Lausanne === */
+
+body, p, li {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 250;
+}
+
+h1 {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 950;
+}
+
+h2 {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 750;
+}
+
+
 
 :root {
   --black: #000;
@@ -9,11 +49,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  line-height: 1.5;
-  letter-spacing: -0.01em;
+ body, p, li {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 250;
 }
 
 header {
@@ -25,8 +63,14 @@ header {
 .logo { font-weight: 700; font-size: clamp(1.3rem, 2vw, 1.7rem); text-transform: uppercase; }
 
 nav a {
-  margin-left: 2rem; text-decoration: none; color: var(--black);
-  font-weight: 500;
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 750;
+  transition: font-weight 0.2s ease;
+}
+nav a.active-section {
+  font-weight: 950;
+}
+
 }
 
 .lang-switcher { display: flex; gap: 1rem; margin-left: 2rem; }
@@ -92,6 +136,12 @@ header {
   border-bottom: 1px solid #000;
 }
 
+.logo img {
+  height:160px;
+  width: auto;
+  display: block;
+}
+
 .logo {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -141,12 +191,9 @@ nav a:hover {
 /* === SECTION HEADINGS (Projects, Studio, etc.) === */
 
 h2 {
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 3rem;
-  text-align: left;
-  font-weight: 600;
+  h2 {
+  font-family: "TWKLausanne", sans-serif;
+  font-weight: 750;
 }
 
 /* Centered sections use consistent vertical rhythm */
