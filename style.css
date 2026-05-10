@@ -309,12 +309,14 @@ section + section {
     letter-spacing: 0.08em;
   }
 }
-.hidden {
-  display: none !important;
-}
 
 .full-screen {
   width: 100vw;
   height: auto;
   margin-left: calc(50% - 50vw);
 }
+
+.hidden {
+  display: none !important;
+}
+
