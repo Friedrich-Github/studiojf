@@ -310,14 +310,20 @@ section + section {
   }
 }
 
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .full-screen {
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 2rem auto;
 }
-
+  
 .hidden {
   display: none !important;
 }
