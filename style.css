@@ -325,3 +325,16 @@ section + section {
 .hidden {
   display: none !important;
 }
+
+
+.socials a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+}
+
+.socials a::after {
+  content: "↗";
+  font-size: 0.85em;
+  transform: translateY(-1px);
+}
