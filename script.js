@@ -26,3 +26,29 @@ function setLanguage(lang) {
   // Sprache merken
   localStorage.setItem('lang', lang);
 }
+
+/* === SECTION HIGHLIGHT ON SCROLL === */
+
+const sections = document.querySelectorAll("main section");
+const navLinks = document.querySelectorAll("nav a");
+
+function activateSectionOnScroll() {
+  let current = "";
+
+  sections.forEach(section => {
+    const top = section.offsetTop - 150;
+    if (scrollY >= top) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active-section");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active-section");
+    }
+  });
+}
+
+window.addEventListener("scroll", activateSectionOnScroll);
+
