@@ -21,7 +21,14 @@
   font-style: normal;
 }
 
-/* === Typography Defaults with TWK Lausanne === */
+[data-lang] {
+  transition: opacity 0.25s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
 
 body, p, li {
   font-family: "TWKLausanne", sans-serif;
