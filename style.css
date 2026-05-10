@@ -1,3 +1,12 @@
+[data-lang] {
+  transition: opacity 0.25s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
 /* === TWK Lausanne Font Loading === */
 
 @font-face {
