@@ -1,33 +1,27 @@
-/* =========================================================
-   LANGUAGE SWITCH
-   ========================================================= */
+/* === LANGUAGE SWITCH — FINAL WORKING VERSION === */
 
 const langButtons = document.querySelectorAll('.lang-switcher button');
 const langElements = document.querySelectorAll('[data-lang]');
 
-// default language = English
+// Default = English
 setLanguage("en");
 
-// handle button click
-langButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    setLanguage(button.dataset.setlang);
+langButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.dataset.setlang;
+    setLanguage(lang);
   });
 });
 
 function setLanguage(lang) {
-  // highlight active button
   langButtons.forEach(btn => {
     btn.classList.toggle("active", btn.dataset.setlang === lang);
   });
 
-  // show/hide language content
   langElements.forEach(el => {
-    el.classList.toggle("hidden", el.dataset.lang !== lang);
+    const isActive = el.dataset.lang === lang;
+    el.classList.toggle("active-lang", isActive);
   });
-
-  // save preference
-  localStorage.setItem("lang", lang);
 }
 
 
