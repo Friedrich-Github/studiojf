@@ -19,18 +19,23 @@
   font-family: "TWKLausanne";
   src: url("fonts/TWKLausanne-250.otf") format("opentype");
   font-weight: 250;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "TWKLausanne";
   src: url("fonts/TWKLausanne-750.otf") format("opentype");
   font-weight: 750;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "TWKLausanne";
   src: url("fonts/TWKLausanne-950.otf") format("opentype");
   font-weight: 950;
+  font-style: normal;
+}
+
 }
 
 
