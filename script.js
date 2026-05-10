@@ -1,68 +1,3 @@
-/* === LANGUAGE VISIBILITY FIX === */
-[data-lang] {
-  transition: opacity 0.25s ease;
-}
-
-.hidden {
-  display: none !important;
-}
-
-const langButtons = document.querySelectorAll('.lang-switcher button');
-const langElements = document.querySelectorAll('[data-lang]');
-
-// ALWAYS DEFAULT TO ENGLISH
-setLanguage('en');
-
-// Sprache wechseln
-langButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    setLanguage(button.dataset.setlang);
-  });
-});
-
-function setLanguage(lang) {
-
-  // Buttons markieren
-  langButtons.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.setlang === lang);
-  });
-
-  // Texte ein-/ausblenden
-  langElements.forEach(el => {
-    el.classList.toggle('hidden', el.dataset.lang !== lang);
-  });
-
-  // Sprache merken
-  localStorage.setItem('lang', lang);
-}
-
-/* === SECTION HIGHLIGHT ON SCROLL === */
-
-const sections = document.querySelectorAll("main section");
-const navLinks = document.querySelectorAll("nav a");
-
-function activateSectionOnScroll() {
-  let current = "";
-
-  sections.forEach(section => {
-    const top = section.offsetTop - 150;
-    if (scrollY >= top) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active-section");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active-section");
-    }
-  });
-}
-
-window.addEventListener("scroll", activateSectionOnScroll);
-
-
-
 /* =========================================================
    LANGUAGE SWITCH
    ========================================================= */
@@ -98,7 +33,6 @@ function setLanguage(lang) {
 
 /* =========================================================
    SECTION HIGHLIGHT ON SCROLL
-   (Navigation gets font-weight 950 on active section)
    ========================================================= */
 
 const sections = document.querySelectorAll("main section");
@@ -108,7 +42,7 @@ function activateSectionOnScroll() {
   let current = "";
 
   sections.forEach(section => {
-    const offset = section.offsetTop - 150; // activate earlier while scrolling
+    const offset = section.offsetTop - 150; 
     if (window.scrollY >= offset) {
       current = section.getAttribute("id");
     }
@@ -126,7 +60,7 @@ window.addEventListener("scroll", activateSectionOnScroll);
 
 
 /* =========================================================
-   SMOOTH SCROLLING FOR NAVIGATION (optional but elegant)
+   SMOOTH SCROLL
    ========================================================= */
 
 navLinks.forEach(link => {
