@@ -390,7 +390,15 @@ section + section {
 .project img {
   width: 100%;
   height: 420px;
+  object-fit: cover;
+}
+
+/* FIRST TWO PROJECTS ONLY */
+
+.project:nth-child(1) img,
+.project:nth-child(2) img {
   object-fit: contain;
+  height: 420px;
 }
   
 .project span {
