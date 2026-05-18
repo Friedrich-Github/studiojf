@@ -74,3 +74,30 @@ const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 50);
 });
+
+const sliderProject = document.querySelector(".slider-project");
+
+if (sliderProject) {
+
+  const slides = sliderProject.querySelectorAll(".slide");
+  const leftBtn = sliderProject.querySelector(".left");
+  const rightBtn = sliderProject.querySelector(".right");
+
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  rightBtn.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  leftBtn.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+}
