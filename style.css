@@ -378,10 +378,10 @@ section + section {
 
 .project img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 420px;
+  object-fit: cover;
 }
-
+  
 .project span {
   margin-top: 1rem;
   font-size: 0.9rem;
