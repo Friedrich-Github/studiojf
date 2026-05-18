@@ -423,19 +423,29 @@ section + section {
   overflow: hidden;
 }
 
-.slider img {
+/* === SLIDER PROJECT === */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 520px; /* adjust later if needed */
+  overflow: hidden;
+}
+
+/* each slide */
+.slide {
   position: absolute;
   inset: 0;
 
   width: 100%;
   height: 100%;
 
-  object-fit: contain;
-
+  object-fit: cover; /* better for grid cards */
+  
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.slider img.active {
+.slide.active {
   opacity: 1;
 }
