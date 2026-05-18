@@ -174,13 +174,6 @@ main {
 
 /* === NAVIGATION (editorial proportion) === */
 
-header {
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid #000;
-}
 
 .logo img {
   width:200px;
