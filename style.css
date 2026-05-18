@@ -110,18 +110,10 @@ main {
   margin-left: calc(50% - 50vw);
 }
 
-  .media img {
-  width: 65%;
-  height: auto;
+.media img {
+  width: 100%;
+  height: 300px;
   display: block;
-  margin: 0 auto 1rem;
-}
-
-.project img {
-  width: 65%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
 }
 
 /* === HERO (editorial typography style) === */
