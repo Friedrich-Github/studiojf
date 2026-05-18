@@ -398,7 +398,7 @@ section + section {
 .project:nth-child(1) img,
 .project:nth-child(2) img {
   object-fit: contain;
-  height: 720px;
+  height: 420px;
 }
   
 .project span {
