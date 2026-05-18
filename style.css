@@ -283,43 +283,7 @@ section + section {
     gap: 1rem;
   }
 
-.projects {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 9rem 2rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  margin-top: 4rem;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project span {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-@media (max-width: 700px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
+  .projects
   .studio,
   .contact,
   .imprint {
@@ -390,4 +354,43 @@ section + section {
 
   display: inline-block;
   text-decoration: none;
+}
+
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 9rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project span {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
