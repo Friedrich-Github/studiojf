@@ -79,8 +79,23 @@ header {
   padding: 2rem; border-bottom: 1px solid var(--black);
   position: sticky; top: 0; background: var(--white); z-index: 10;
 }
+  
+header.scrolled {
+  padding: 1rem 2rem;
+  align-items: center;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
 
 .logo { font-weight: 700; font-size: clamp(1.3rem, 2vw, 1.7rem); text-transform: uppercase; }
+
+.logo {
+  transition: transform 0.25s ease;
+  transform-origin: left center;
+}
+
+header.scrolled .logo {
+  transform: scale(0.85);
+}
 
 nav a {
   font-family: "TWKLausanne", sans-serif;
