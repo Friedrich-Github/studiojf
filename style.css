@@ -117,28 +117,37 @@ main {
 }
 
   
+/* PROJECT GRID */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-
-  max-width: 1200px;
-  margin: 1rem auto 0;
-  padding: 0 2rem 6rem;
+  gap: 3rem;
+  margin-top: 4rem;
 }
 
-.grid img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* PROJECT CARD */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* PROJECT TITLE */
+
+.project span {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 /* MOBILE */
+
 @media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 0.8rem;
-    padding: 0 1rem 4rem;
   }
 }
 
