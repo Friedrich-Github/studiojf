@@ -118,10 +118,10 @@ main {
 }
 
 .project img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width: 60%;
+  height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* === HERO (editorial typography style) === */
