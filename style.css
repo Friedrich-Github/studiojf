@@ -448,7 +448,7 @@ section + section {
   top: 50%;
   transform: translateY(-50%);
 
-  z-index: 20;
+  z-index: 2;
 
   background: rgba(0,0,0,0.15);
   backdrop-filter: blur(4px);
@@ -488,7 +488,8 @@ section + section {
 
   transform: translateX(-50%);
 
-  z-index: 20;
+  z-index: 2;
+  
 
   display: flex;
   gap: 0.5rem;
