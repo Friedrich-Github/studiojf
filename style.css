@@ -492,13 +492,3 @@ section + section {
   padding: 0.35rem 0.6rem;
   border-radius: 999px;
 }
-
-.dot {
-  color: black;
-  opacity: 0.5;
-  font-size: 0.8rem;
-}
-
-.dot.active {
-  opacity: 1;
-}
