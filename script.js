@@ -75,32 +75,41 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
+
+
 document.querySelectorAll("[data-slider]").forEach(slider => {
+
   const slides = slider.querySelectorAll(".slide");
   const dots = slider.querySelectorAll(".dot");
+
   const next = slider.querySelector("[data-next]");
   const prev = slider.querySelector("[data-prev]");
 
   let index = 0;
 
-  function update() {
-    slides.forEach((s, i) => {
-      s.classList.toggle("active", i === index);
-      dots[i].classList.toggle("active", i === index);
+  function updateSlider() {
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
     });
   }
 
   next.addEventListener("click", () => {
     index = (index + 1) % slides.length;
-    update();
+    updateSlider();
   });
 
   prev.addEventListener("click", () => {
     index = (index - 1 + slides.length) % slides.length;
-    update();
+    updateSlider();
   });
 
-  // swipe (mobile)
+  /* MOBILE SWIPE */
+
   let startX = 0;
 
   slider.addEventListener("touchstart", e => {
@@ -108,16 +117,20 @@ document.querySelectorAll("[data-slider]").forEach(slider => {
   });
 
   slider.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
 
-    if (startX - endX > 40) {
+    const endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) {
       index = (index + 1) % slides.length;
-    } else if (endX - startX > 40) {
+    }
+
+    if (endX - startX > 50) {
       index = (index - 1 + slides.length) % slides.length;
     }
 
-    update();
+    updateSlider();
   });
 
-  update();
+  updateSlider();
+
 });
