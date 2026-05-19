@@ -495,7 +495,7 @@ section + section {
 }
 
 .dot {
-  color: white;
+  color: black;
   opacity: 0.5;
   font-size: 0.8rem;
 }
