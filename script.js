@@ -92,10 +92,10 @@ document.querySelectorAll("[data-slider]").forEach(slider => {
     slides.forEach((slide, i) => {
       slide.classList.toggle("active", i === index);
     });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
+    
+    const counter = slider.querySelector(".counter");
+    
+    counter.textContent = `${index + 1}/${slides.length}`;
   }
 
   next.addEventListener("click", () => {
