@@ -481,18 +481,16 @@ section + section {
 
 /* COUNTER */
 
-.dots {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
+.counter {
+  color: black;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
 
-  transform: translateX(-50%);
+  background: rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
 
-  z-index: 2;
-  
-
-  display: flex;
-  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
 }
 
 .dot {
