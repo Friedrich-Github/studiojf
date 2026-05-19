@@ -419,15 +419,6 @@ section + section {
 .slider {
   position: relative;
   width: 100%;
-  height: 520px;
-  overflow: hidden;
-}
-
-/* === SLIDER PROJECT === */
-
-.slider {
-  position: relative;
-  width: 100%;
   height: 520px; /* adjust later if needed */
   overflow: hidden;
 }
