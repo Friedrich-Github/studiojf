@@ -536,20 +536,17 @@ section + section {
   cursor: pointer;
 }
 
-/* Only project images get zoom cursor */
-
-#projects img {
-  cursor: zoom-in;
+/* Default: normal cursor everywhere */
+body {
+  cursor: auto;
 }
 
-/* === CUSTOM LIGHTBOX CURSOR === */
-
-#projects img,
-#projects .slide {
+/* ONLY project images get custom "+" cursor */
+#projects img {
   cursor: none;
 }
 
-/* custom cursor element */
+/* Custom cursor element */
 .custom-cursor {
   position: fixed;
   width: 28px;
@@ -558,9 +555,6 @@ section + section {
   border: 1.5px solid black;
   border-radius: 50%;
 
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,8 +562,13 @@ section + section {
   font-size: 18px;
   line-height: 1;
 
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
   z-index: 99999;
 
   mix-blend-mode: difference;
-  color: black;
+
+  opacity: 0; /* hidden by default */
 }
