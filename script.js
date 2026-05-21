@@ -223,7 +223,6 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 
-const cursor = document.querySelector(".custom-cursor");
 const projectImages = document.querySelectorAll("#projects img");
 
 projectImages.forEach(img => {
