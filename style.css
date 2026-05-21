@@ -541,3 +541,35 @@ section + section {
 #projects img {
   cursor: zoom-in;
 }
+
+/* === CUSTOM LIGHTBOX CURSOR === */
+
+#projects img,
+#projects .slide {
+  cursor: none;
+}
+
+/* custom cursor element */
+.custom-cursor {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+
+  border: 1.5px solid black;
+  border-radius: 50%;
+
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 1;
+
+  z-index: 99999;
+
+  mix-blend-mode: difference;
+  color: black;
+}
