@@ -212,14 +212,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
 });
 
-const projectImages = document.querySelectorAll("#projects img");
+const projectImages = document.querySelectorAll(".grid .project > img");
 
 projectImages.forEach(img => {
-
   img.addEventListener("mouseenter", () => {
     cursor.style.opacity = "1";
   });
@@ -227,10 +225,4 @@ projectImages.forEach(img => {
   img.addEventListener("mouseleave", () => {
     cursor.style.opacity = "0";
   });
-
-});
-
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
 });
