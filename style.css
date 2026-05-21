@@ -492,3 +492,52 @@ section + section {
   padding: 0.35rem 0.6rem;
   border-radius: 999px;
 }
+
+/* === LIGHTBOX === */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.92);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease;
+
+  z-index: 9999;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+
+  color: white;
+  font-size: 3rem;
+
+  cursor: pointer;
+}
+
+/* Only project images get zoom cursor */
+
+#projects img {
+  cursor: zoom-in;
+}
