@@ -222,3 +222,23 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
+
+const cursor = document.querySelector(".custom-cursor");
+const projectImages = document.querySelectorAll("#projects img");
+
+projectImages.forEach(img => {
+
+  img.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "1";
+  });
+
+  img.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+  });
+
+});
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
