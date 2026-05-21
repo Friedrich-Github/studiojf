@@ -135,50 +135,81 @@ document.querySelectorAll("[data-slider]").forEach(slider => {
 
 });
 
-/* === PROJECT LIGHTBOX (ROBUST VERSION) === */
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeLightbox = document.querySelector(".lightbox-close");
 
-  function openLightbox(src, alt) {
+  const images = Array.from(document.querySelectorAll("#projects img"));
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+
+    const img = images[currentIndex];
+
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+
     lightbox.classList.add("open");
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || "";
     document.body.style.overflow = "hidden";
   }
 
-  /* ONLY #projects clicks */
-  document.querySelector("#projects").addEventListener("click", (e) => {
+  function close() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
 
+  function next() {
+    currentIndex = (currentIndex + 1) % images.length;
+    openLightbox(currentIndex);
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    openLightbox(currentIndex);
+  }
+
+  // OPEN
+  document.querySelector("#projects").addEventListener("click", (e) => {
     const img = e.target.closest("img");
     if (!img) return;
 
-    openLightbox(img.src, img.alt);
-
+    currentIndex = images.indexOf(img);
+    openLightbox(currentIndex);
   });
 
-  /* Close */
-
-  closeLightbox.addEventListener("click", () => {
-    lightbox.classList.remove("open");
-    document.body.style.overflow = "";
-  });
+  // CLOSE
+  closeLightbox.addEventListener("click", close);
 
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.classList.remove("open");
-      document.body.style.overflow = "";
-    }
+    if (e.target === lightbox) close();
   });
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      lightbox.classList.remove("open");
-      document.body.style.overflow = "";
+  // CLICK LEFT / RIGHT ON IMAGE
+  lightboxImg.addEventListener("click", (e) => {
+
+    const rect = lightboxImg.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+
+    const isRightSide = x > rect.width / 2;
+
+    if (isRightSide) {
+      next();
+    } else {
+      prev();
     }
+
+  });
+
+  // KEYBOARD
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("open")) return;
+
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
   });
 
 });
