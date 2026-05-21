@@ -141,7 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxImg = document.getElementById("lightbox-img");
   const closeLightbox = document.querySelector(".lightbox-close");
 
-  const images = Array.from(document.querySelectorAll("#projects img"));
+  // ONLY images inside project grid (not sliders/buttons)
+  const images = Array.from(document.querySelectorAll(".projects .project img"));
+
   let currentIndex = 0;
 
   function openLightbox(index) {
@@ -171,13 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
     openLightbox(currentIndex);
   }
 
-  // OPEN
-  document.querySelector("#projects").addEventListener("click", (e) => {
-    const img = e.target.closest("img");
-    if (!img) return;
-
-    currentIndex = images.indexOf(img);
-    openLightbox(currentIndex);
+  // OPEN (ONLY GRID IMAGES)
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      openLightbox(index);
+    });
   });
 
   // CLOSE
@@ -189,18 +189,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // CLICK LEFT / RIGHT ON IMAGE
   lightboxImg.addEventListener("click", (e) => {
-
     const rect = lightboxImg.getBoundingClientRect();
     const x = e.clientX - rect.left;
 
-    const isRightSide = x > rect.width / 2;
-
-    if (isRightSide) {
-      next();
-    } else {
-      prev();
-    }
-
+    if (x > rect.width / 2) next();
+    else prev();
   });
 
   // KEYBOARD
