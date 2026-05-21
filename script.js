@@ -134,3 +134,65 @@ document.querySelectorAll("[data-slider]").forEach(slider => {
   updateSlider();
 
 });
+
+/* === PROJECT LIGHTBOX === */
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeLightbox = document.querySelector(".lightbox-close");
+
+/* ONLY images inside #projects */
+const projectImages = document.querySelectorAll("#projects img");
+
+projectImages.forEach(img => {
+
+  img.addEventListener("click", () => {
+
+    lightbox.classList.add("open");
+
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+});
+
+/* Close button */
+
+closeLightbox.addEventListener("click", () => {
+
+  lightbox.classList.remove("open");
+
+  document.body.style.overflow = "";
+
+});
+
+/* Close when clicking background */
+
+lightbox.addEventListener("click", e => {
+
+  if (e.target === lightbox) {
+
+    lightbox.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+  }
+
+});
+
+/* ESC key */
+
+document.addEventListener("keydown", e => {
+
+  if (e.key === "Escape") {
+
+    lightbox.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+  }
+
+});
