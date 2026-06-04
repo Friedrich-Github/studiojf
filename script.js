@@ -226,3 +226,7 @@ projectImages.forEach(img => {
     cursor.style.opacity = "0";
   });
 });
+
+gtag('consent', 'update', {
+  analytics_storage: 'granted'
+});
